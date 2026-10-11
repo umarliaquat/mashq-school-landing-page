@@ -1,0 +1,182 @@
+{
+  "revision": "460102513199292416",
+  "method": "Codex in-app browser viewport emulation; DOM measurements and visual inspections",
+  "viewports": [
+    {
+      "height": 568,
+      "images": [],
+      "overflow": [],
+      "page": 305,
+      "stepsPosition": "static",
+      "width": 320
+    },
+    {
+      "height": 640,
+      "images": [],
+      "overflow": [],
+      "page": 345,
+      "stepsPosition": "static",
+      "width": 360
+    },
+    {
+      "height": 844,
+      "images": [],
+      "overflow": [],
+      "page": 375,
+      "stepsPosition": "static",
+      "width": 390
+    },
+    {
+      "height": 932,
+      "images": [],
+      "overflow": [],
+      "page": 415,
+      "stepsPosition": "static",
+      "width": 430
+    },
+    {
+      "height": 900,
+      "images": [],
+      "overflow": [],
+      "page": 585,
+      "stepsPosition": "static",
+      "width": 600
+    },
+    {
+      "height": 1024,
+      "images": [],
+      "overflow": [],
+      "page": 753,
+      "stepsPosition": "static",
+      "width": 768
+    },
+    {
+      "height": 390,
+      "images": [],
+      "overflow": [],
+      "page": 829,
+      "stepsPosition": "static",
+      "width": 844
+    },
+    {
+      "height": 900,
+      "images": [],
+      "overflow": [],
+      "page": 885,
+      "stepsPosition": "static",
+      "width": 900
+    },
+    {
+      "height": 900,
+      "images": [],
+      "overflow": [],
+      "page": 886,
+      "stepsPosition": "static",
+      "width": 901
+    },
+    {
+      "height": 768,
+      "images": [],
+      "overflow": [],
+      "page": 1009,
+      "stepsPosition": "static",
+      "width": 1024
+    },
+    {
+      "height": 720,
+      "images": [],
+      "overflow": [],
+      "page": 1265,
+      "stepsPosition": "static",
+      "width": 1280
+    },
+    {
+      "height": 900,
+      "images": [],
+      "overflow": [],
+      "page": 1425,
+      "stepsPosition": "static",
+      "width": 1440
+    },
+    {
+      "height": 1080,
+      "images": [],
+      "overflow": [],
+      "page": 1905,
+      "stepsPosition": "sticky",
+      "width": 1920
+    },
+    {
+      "height": 1440,
+      "images": [],
+      "overflow": [],
+      "page": 2545,
+      "stepsPosition": "sticky",
+      "width": 2560
+    }
+  ],
+  "interactions": [
+    {
+      "tab": "Teachers",
+      "selected": "true"
+    },
+    {
+      "tab": "Parents",
+      "selected": "true"
+    },
+    {
+      "tab": "Principals",
+      "selected": "true"
+    },
+    {
+      "step": "Real Mashq assignments screen with due today and upcoming assignments"
+    },
+    {
+      "step": "Real Mashq subtraction practice screen with correct answer feedback"
+    },
+    {
+      "step": "Assignment Completed: confetti, pink brain mascot, 01:30, 5 of 5, 96 percent"
+    },
+    {
+      "faq": "Which grades and subjects does Mashq cover?",
+      "expanded": "true"
+    },
+    {
+      "faq": "How do students log in?",
+      "expanded": "true"
+    },
+    {
+      "faq": "How long does school setup take?",
+      "expanded": "true"
+    },
+    {
+      "faq": "Can we use our school logo and colours?",
+      "expanded": "true"
+    },
+    {
+      "faq": "How is Mashq priced?",
+      "expanded": "true"
+    },
+    {
+      "formFields": [
+        {
+          "required": true,
+          "type": "text",
+          "valid": false
+        },
+        {
+          "required": true,
+          "type": "text",
+          "valid": false
+        },
+        {
+          "required": true,
+          "type": "tel",
+          "valid": false
+        }
+      ],
+      "hash": "#mashq-v2-demo"
+    }
+  ],
+  "limitations": "Physical iOS/Android devices and other browser engines were not tested."
+}
