@@ -274,4 +274,6 @@
 
 .v7-hero .v7-heading-emphasis{white-space:nowrap}
 
-.v7-final-transparent{height:auto}.v7-final-transparent img{display:block;width:100%;height:auto;position:static}
+.v7-final-transparent{width:220px;max-width:100%;height:auto}.v7-final-transparent img{display:block;width:100%;height:auto;position:static}
+
+@media(max-width:900px){.v7-final-transparent{width:165px}}
