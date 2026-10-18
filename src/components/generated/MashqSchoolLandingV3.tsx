@@ -192,7 +192,7 @@ export const MashqSchoolLandingV3 = ({ heroVersion = 'original' }: { heroVersion
    {heroVersion === 'school' ? (
    <section className="v2-hero v7-hero"><div className="v2-container v2-hero-layout"><div className="v2-hero-copy">
     <p className="v7-eyebrow">Digital homework for schools</p>
-    <h1>Homework your school<br />can <span>actually see.</span></h1>
+    <h1>Homework your school can <span className="v7-heading-emphasis">actually see.</span></h1>
     <p className="v7-subheading">Mashq replaces paper homework. Teachers assign Math and English skills, students practise on any phone, and parents and principals see every result.</p>
     <div className="v2-actions"><Demo label="Book a school demo" /><a className="v2-watch" href="#mashq-v2-how">See how it works<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6" /></svg></a></div>
     <ul className="v7-chips">{['Math and English','Grades 1-8','Works on any phone'].map((label,i)=><li key={label}><svg viewBox="0 0 24 24" aria-hidden="true">{i===0?<><path d="M3 5h7l2 2 2-2h7v15h-7l-2 2-2-2H3ZM12 7v15" /></>:i===1?<><path d="m2 8 10-5 10 5-10 5ZM6 10v7l6 3 6-3v-7" /></>:i===2?<><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18h4" /></>:<path d="m5 12 4 4L19 6" />}</svg>{label}</li>)}</ul>
