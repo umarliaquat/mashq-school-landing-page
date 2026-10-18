@@ -1,3 +1,4 @@
+import heroMascot from '../../../assets/hero-mascot-transparent.png';
 import teacherAssignment from '../../../assets/teacher-assignment.png';
 import parentDashboard from '../../../assets/parent-dashboard.png';
 import adminTabDashboard from '../../../assets/admin-tab-dashboard.png';
@@ -164,7 +165,7 @@ const HomeworkPanels = () => {
   </div>
  </div>;
 };
-export const MashqSchoolLandingV3 = () => {
+export const MashqSchoolLandingV3 = ({ heroVersion = 'original' }: { heroVersion?: 'original' | 'school' }) => {
   const [step, setStep] = useState(0);
   const [tab, setTab] = useState(0);
   const [open, setOpen] = useState<number | null>(0);
@@ -188,7 +189,17 @@ export const MashqSchoolLandingV3 = () => {
   return <div className="mashq-v2" id="mashq-v2-top">
   <header className="v2-nav"><div className="v2-container"><Brand /><nav aria-label="Main navigation"><a href="#mashq-v2-how">How it works</a><a href="#mashq-v2-views">For your school</a><a href="#mashq-v2-faq">FAQs</a></nav><Demo /></div></header>
   <main>
+   {heroVersion === 'school' ? (
+   <section className="v2-hero v7-hero"><div className="v2-container v2-hero-layout"><div className="v2-hero-copy">
+    <p className="v7-eyebrow">Digital homework for schools in Pakistan · Grades 1-8</p>
+    <h1>Homework your school<br />can <span>actually see.</span></h1>
+    <p className="v7-subheading">Mashq replaces paper homework. Teachers assign Math and English skills, students practise on any phone, and parents and principals see every result.</p>
+    <div className="v2-actions"><Demo label="Book a school demo" /><a className="v2-watch" href="#mashq-v2-how">See how it works<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6" /></svg></a></div>
+    <ul className="v7-chips">{['Math and English','Grades 1-8','Works on any phone','No app to install'].map((label,i)=><li key={label}><svg viewBox="0 0 24 24" aria-hidden="true">{i===0?<><path d="M3 5h7l2 2 2-2h7v15h-7l-2 2-2-2H3ZM12 7v15" /></>:i===1?<><path d="m2 8 10-5 10 5-10 5ZM6 10v7l6 3 6-3v-7" /></>:i===2?<><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18h4" /></>:<path d="m5 12 4 4L19 6" />}</svg>{label}</li>)}</ul>
+   </div><div className="v7-visual-shell"><div className="v2-hero-visual"><div className="v2-visual-block" /><div className="v2-hero-phone"><Phone src={practice} alt="Mashq’s real practice screen: 15 minus 8, answer 7, with encouraging feedback" /></div><div className="v2-real-mastered"><SafeImage src={skills} alt="Real mastered skill: Addition and Subtraction, 20 out of 20 questions, 96 percent score" /></div><div className="v2-real-progress"><SafeImage src={assignments} alt="Real assignment card with 33 percent progress" /></div><div className="v7-hero-mascot"><SafeImage src={heroMascot} alt="Mashq’s celebrating pink brain mascot" /></div><span className="v2-screen-caption">Real practice. A clear next step.</span></div></div></div></section>
+   ) : (
    <section className="v2-hero"><div className="v2-container v2-hero-layout"><div className="v2-hero-copy"><h1>Practice that<br />finishes.<br /><span>Progress you<br />can see.</span></h1><p>Teachers assign. Students practise until they master it. Parents and admins see every result.</p><div className="v2-actions"><Demo /><a className="v2-watch" href="#mashq-v2-how"><span className="v2-play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="m5 3 7 5-7 5Z" /></svg></span>Watch how it works</a></div><p className="v2-assurance">Grades 1–8 <span>·</span> Works on any phone <span>·</span> No app to install</p></div><div className="v2-hero-visual"><div className="v2-visual-block" /><div className="v2-hero-phone"><Phone src={practice} alt="Mashq’s real practice screen: 15 minus 8, answer 7, with encouraging feedback" /></div><div className="v2-real-mastered"><SafeImage src={skills} alt="Real mastered skill: Addition and Subtraction, 20 out of 20 questions, 96 percent score" /></div><div className="v2-real-progress"><SafeImage src={assignments} alt="Real assignment card with 33 percent progress" /></div><Mascot className="v2-hero-mascot" /><span className="v2-screen-caption">Real practice. A clear next step.</span></div></div></section>
+   )}
    <section className="v2-how" id="mashq-v2-how" ref={howRef}><div className="v2-container v2-how-inner"><div className="v2-how-copy"><h2>A school day.<br />Three simple steps.</h2><div className="v2-step-list">{steps.map((s, i) => <button className={`v2-step ${step === i ? 'v2-active-step' : ''}`} key={s.title} onClick={() => setStep(i)} aria-current={step === i ? 'step' : undefined}><span className="v2-step-number">0{i + 1}</span><span><strong>{s.title}</strong><span className="v2-step-text">{s.text}</span></span></button>)}</div><div className="v2-how-progress" aria-label={`Step ${step + 1} of 3`}><i style={{
                 transform: `scaleX(${(step + 1) / 3})`
               }} /></div></div><div className="v2-how-screen"><Phone key={steps[step].src} src={steps[step].src} alt={steps[step].alt} /><p>{steps[step].caption}</p>{step === 2 ? <div className="v3-result-route" aria-label="Student to Teacher to Parent"><span><i />Student</span><b>&gt;</b><span><i />Teacher</span><b>&gt;</b><span><i />Parent</span></div> : <small>{steps[step].note}</small>}</div></div></section>

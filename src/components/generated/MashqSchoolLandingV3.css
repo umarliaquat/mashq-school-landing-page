@@ -240,3 +240,34 @@
 .v2-view-phone-scroll{position:relative;aspect-ratio:390/844;overflow:hidden;border-radius:29px;background:#fff;line-height:0}
 .v2-view-phone-scroll img{width:100%;height:auto;display:block}
 
+
+/* Alternate hero only: ?hero=school preserves the original page. */
+.v7-hero{padding:32px 0 40px}
+.v7-hero .v2-hero-layout{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:24px}
+.v7-hero .v2-hero-copy h1{font-size:80px;line-height:1.025;margin:20px 0 24px}
+.v7-hero .v2-hero-copy .v7-eyebrow{display:inline-block;max-width:100%;padding:8px 13px;border-radius:999px;background:#e9f7ed;color:#087338;font-size:16px;font-weight:800;line-height:1.4;text-transform:uppercase}
+.v7-hero .v2-hero-copy .v7-subheading{font-size:22px;color:var(--v2-ink);max-width:560px;line-height:1.5}
+.v7-hero .v2-actions{gap:24px;margin-top:28px;flex-wrap:wrap}
+.v7-hero .v2-watch svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.v7-chips{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:24px 0 0}
+.v7-chips li{display:flex;align-items:center;gap:8px;background:#f2f6f8;border-radius:12px;padding:7px 11px;font-size:16px;line-height:1.35;color:var(--v2-ink)}
+.v7-chips svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.v7-visual-shell{height:620px;position:relative}
+.v7-hero .v2-hero-visual{position:absolute;width:100%;min-height:820px;top:50%;left:50%;transform:translate(-50%,-50%) scale(.78);margin:0}
+.v7-hero .v2-real-progress{right:-30px;bottom:25px}
+.v7-hero-mascot{position:absolute;z-index:6;width:200px;left:-55px;bottom:85px;transform:rotate(-9deg)}
+.v7-hero-mascot img{display:block;width:100%;height:auto}
+.v7-hero .v2-screen-caption{bottom:-16px;font-size:21px}
+@media(min-width:901px) and (max-width:1100px){.v7-hero .v2-hero-layout{grid-template-columns:1fr}.v7-hero .v2-hero-copy{max-width:760px}.v7-visual-shell{width:600px;max-width:100%;margin:auto}}
+@media(max-width:900px){
+ .v7-hero{padding:36px 0 60px}
+ .v7-hero .v2-hero-layout{grid-template-columns:1fr;gap:24px}
+ .v7-hero .v2-hero-copy h1{font-size:42px;line-height:1.025;margin:20px 0}
+ .v7-hero .v2-hero-copy .v7-subheading{font-size:22px}
+ .v7-hero .v2-actions{align-items:flex-start;gap:12px}
+ .v7-visual-shell{height:660px}
+ .v7-hero .v2-hero-visual{min-height:770px;transform:translate(-50%,-50%) scale(.88)}
+ .v7-hero .v2-real-progress{right:-7px;bottom:10px}
+ .v7-hero-mascot{width:140px;left:-8px;bottom:125px}
+ .v7-hero .v2-screen-caption{bottom:-28px;font-size:19px}
+}
