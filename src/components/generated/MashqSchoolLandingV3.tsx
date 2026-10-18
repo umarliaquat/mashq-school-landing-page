@@ -223,7 +223,6 @@ export const MashqSchoolLandingV3 = ({ heroVersion = 'original' }: { heroVersion
   <div className="v3-callout v3-chart-callout"><strong>Know it's being used</strong><p>Active students and assignments, day by day.</p><span className="v3-callout-line"><i /></span></div>
   <div className="v3-callout v3-feed-callout"><strong>Stay in the loop</strong><p>Submissions, imports and new classes as they happen.</p><span className="v3-callout-line"><i /></span></div>
  </div>
- <p className="v3-brand-caption">Shown with Bright Futures School branding.</p>
  <div className="v3-school-facts"><span>Bulk import your class lists</span><span>Your logo and colours everywhere</span><span>Works on desktop and mobile</span></div>
  <div className="v3-school-action"><Demo /></div>
 </div></section>
