@@ -240,6 +240,3 @@
 .v2-view-phone-scroll{position:relative;aspect-ratio:390/844;overflow:hidden;border-radius:29px;background:#fff;line-height:0}
 .v2-view-phone-scroll img{width:100%;height:auto;display:block}
 
-.v2-parent-branding{position:absolute;inset:0;pointer-events:none;container-type:inline-size}
-.v2-parent-welcome{position:absolute;left:5.1%;top:2.05%;width:90%;height:4.5%;background:#fff;color:#667791;font:400 3.45cqw/1.35 Arial,sans-serif;padding:0}
-.v2-parent-school{position:absolute;left:18.8%;top:13.8%;width:76%;height:3.2%;background:#fff;color:#1e2b3f;font:700 4.8cqw/1.2 Arial,sans-serif;padding:0}
