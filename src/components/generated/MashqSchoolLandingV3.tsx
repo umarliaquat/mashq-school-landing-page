@@ -80,8 +80,8 @@ const views = [{
   title: 'A clear update.\nA familiar inbox.',
   benefits: ['School-branded mastery emails and weekly digests.', 'No app to install.', 'No parent login to remember.'],
   image: parentProgressEmail,
-  alt: 'School-branded parent email showing learning progress, completed skills and a teacher note',
-  caption: 'Learning progress, delivered to a parent’s inbox.'
+  alt: 'Bright School parent email showing learning progress, completed skills and a teacher note',
+  caption: 'Bright School progress updates, delivered to a parent’s inbox.'
 }, {
   name: 'Admin',
   title: 'Your school.\nA clearer picture.',
@@ -199,7 +199,7 @@ export const MashqSchoolLandingV3 = () => {
      <div className="v6-demo"><Demo /></div>
     </div>
    </section>
-   <section className="v2-views" id="mashq-v2-views"><div className="v2-container"><div className="v2-views-heading"><h2>One platform.<br /><span>Three clear views.</span></h2><div className="v2-tabs" role="tablist" aria-label="School community views">{views.map((v, i) => <button role="tab" aria-selected={tab === i} aria-controls="mashq-v2-view-panel" className={tab === i ? 'v2-tab-selected' : ''} key={v.name} onClick={() => setTab(i)}>{v.name}</button>)}</div></div><div className="v2-view-panel" role="tabpanel" id="mashq-v2-view-panel" aria-label={views[tab].name}><div className="v2-tab-image"><div className="v2-phone v2-view-phone"><div className="v2-view-phone-scroll" tabIndex={0} role="region" aria-label={`${views[tab].name} screen, scroll to explore`}><SafeImage src={views[tab].image} alt={views[tab].alt} /></div></div><p>{views[tab].caption}</p></div><div className="v2-tab-copy"><h3>{views[tab].title.split('\n').map((line, i) => <React.Fragment key={line}>{i > 0 && <br />}{line}</React.Fragment>)}</h3><ul>{views[tab].benefits.map(b => <li key={b}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6" /></svg>{b}</li>)}</ul></div></div></div></section>
+   <section className="v2-views" id="mashq-v2-views"><div className="v2-container"><div className="v2-views-heading"><h2>One platform.<br /><span>Three clear views.</span></h2><div className="v2-tabs" role="tablist" aria-label="School community views">{views.map((v, i) => <button role="tab" aria-selected={tab === i} aria-controls="mashq-v2-view-panel" className={tab === i ? 'v2-tab-selected' : ''} key={v.name} onClick={() => setTab(i)}>{v.name}</button>)}</div></div><div className="v2-view-panel" role="tabpanel" id="mashq-v2-view-panel" aria-label={views[tab].name}><div className="v2-tab-image"><div className="v2-phone v2-view-phone"><div className="v2-view-phone-scroll" role="region" aria-label={`${views[tab].name} screen`}><SafeImage src={views[tab].image} alt={views[tab].alt} />{tab === 1 && <div className="v2-parent-branding" aria-hidden="true"><span className="v2-parent-welcome">Welcome to Bright School! Your parent account is ready.</span><span className="v2-parent-school">Bright School</span></div>}</div></div><p>{views[tab].caption}</p></div><div className="v2-tab-copy"><h3>{views[tab].title.split('\n').map((line, i) => <React.Fragment key={line}>{i > 0 && <br />}{line}</React.Fragment>)}</h3><ul>{views[tab].benefits.map(b => <li key={b}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6" /></svg>{b}</li>)}</ul></div></div></div></section>
 
 <section className="v3-schools" id="mashq-v3-schools"><div className="v2-container">
  <h2>Run the whole school<br />from one screen.</h2>
