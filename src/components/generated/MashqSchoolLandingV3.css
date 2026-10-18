@@ -235,3 +235,7 @@
  .v6-progress-crop{left:-3px}
 }
 @media(hover:none){.v2-btn:hover{transform:none}}
+
+/* Keep the uploaded long screens readable within the existing phone frame. */
+.v2-view-phone-scroll{aspect-ratio:390/844;overflow-y:auto;overflow-x:hidden;border-radius:29px;scrollbar-width:thin;background:#fff;line-height:0;overscroll-behavior:contain}
+.v2-view-phone-scroll img{width:100%;height:auto;display:block}

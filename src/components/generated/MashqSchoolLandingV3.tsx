@@ -1,3 +1,6 @@
+import teacherAssignment from '../../../assets/teacher-assignment.png';
+import parentProgressEmail from '../../../assets/parent-progress-email.png';
+import adminTabDashboard from '../../../assets/admin-tab-dashboard.png';
 import paperIllustration from '../../../assets/paper-homework-illustration.svg';
 import React, { useEffect, useRef, useState } from 'react';
 import adminDesktop from '../../../assets/admin-desktop.png';
@@ -69,26 +72,23 @@ const views = [{
   name: 'Teachers',
   title: 'Less chasing.\nMore teaching.',
   benefits: ['Assign practice in 3 steps.', 'See who needs a little help next.', 'Share progress with parents in one tap.'],
-  image: skills,
-  alt: 'Real Mashq skill status screen',
-  caption: 'Student skill status, as seen in Mashq.',
-  missing: '[replace: teacher class progress screen]'
+  image: teacherAssignment,
+  alt: 'Mashq teacher New Assignment screen with Grade 3 mathematics topics',
+  caption: 'Choose skills and create an assignment in three steps.'
 }, {
   name: 'Parents',
   title: 'A clear update.\nA familiar inbox.',
   benefits: ['School-branded mastery emails and weekly digests.', 'No app to install.', 'No parent login to remember.'],
-  image: complete,
-  alt: 'Real Mashq completion screen celebrating a finished assignment',
-  caption: 'The moment a child finishes an assignment.',
-  missing: '[replace: school-branded mastery email + weekly digest]'
+  image: parentProgressEmail,
+  alt: 'School-branded parent email showing learning progress, completed skills and a teacher note',
+  caption: 'Learning progress, delivered to a parent’s inbox.'
 }, {
-  name: 'Principals',
+  name: 'Admin',
   title: 'Your school.\nA clearer picture.',
   benefits: ['Your logo and colours on login, certificates and emails.', 'Manage class rosters and student credentials.', 'Follow usage across your school.'],
-  image: home,
-  alt: 'Real Mashq home screen showing Pakistan Public School and College branding',
-  caption: 'School branding in the real student experience.',
-  missing: '[replace: principal roster + school usage screen]'
+  image: adminTabDashboard,
+  alt: 'Bright Futures admin dashboard with school statistics, quick actions and activity',
+  caption: 'Your school’s classes, people and activity in one view.'
 }];
 const HomeworkRow = ({
   paper,
@@ -188,7 +188,7 @@ export const MashqSchoolLandingV3 = () => {
   return <div className="mashq-v2" id="mashq-v2-top">
   <header className="v2-nav"><div className="v2-container"><Brand /><nav aria-label="Main navigation"><a href="#mashq-v2-how">How it works</a><a href="#mashq-v2-views">For your school</a><a href="#mashq-v2-faq">FAQs</a></nav><Demo /></div></header>
   <main>
-   <section className="v2-hero"><div className="v2-container v2-hero-layout"><div className="v2-hero-copy"><h1>Practice that<br />finishes.<br /><span>Progress you<br />can see.</span></h1><p>Teachers assign. Students practise until they master it. Parents and principals see every result.</p><div className="v2-actions"><Demo /><a className="v2-watch" href="#mashq-v2-how"><span className="v2-play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="m5 3 7 5-7 5Z" /></svg></span>Watch how it works</a></div><p className="v2-assurance">Grades 1–8 <span>·</span> Works on any phone <span>·</span> No app to install</p></div><div className="v2-hero-visual"><div className="v2-visual-block" /><div className="v2-hero-phone"><Phone src={practice} alt="Mashq’s real practice screen: 15 minus 8, answer 7, with encouraging feedback" /></div><div className="v2-real-mastered"><SafeImage src={skills} alt="Real mastered skill: Addition and Subtraction, 20 out of 20 questions, 96 percent score" /></div><div className="v2-real-progress"><SafeImage src={assignments} alt="Real assignment card with 33 percent progress" /></div><Mascot className="v2-hero-mascot" /><span className="v2-screen-caption">Real practice. A clear next step.</span></div></div></section>
+   <section className="v2-hero"><div className="v2-container v2-hero-layout"><div className="v2-hero-copy"><h1>Practice that<br />finishes.<br /><span>Progress you<br />can see.</span></h1><p>Teachers assign. Students practise until they master it. Parents and admins see every result.</p><div className="v2-actions"><Demo /><a className="v2-watch" href="#mashq-v2-how"><span className="v2-play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="m5 3 7 5-7 5Z" /></svg></span>Watch how it works</a></div><p className="v2-assurance">Grades 1–8 <span>·</span> Works on any phone <span>·</span> No app to install</p></div><div className="v2-hero-visual"><div className="v2-visual-block" /><div className="v2-hero-phone"><Phone src={practice} alt="Mashq’s real practice screen: 15 minus 8, answer 7, with encouraging feedback" /></div><div className="v2-real-mastered"><SafeImage src={skills} alt="Real mastered skill: Addition and Subtraction, 20 out of 20 questions, 96 percent score" /></div><div className="v2-real-progress"><SafeImage src={assignments} alt="Real assignment card with 33 percent progress" /></div><Mascot className="v2-hero-mascot" /><span className="v2-screen-caption">Real practice. A clear next step.</span></div></div></section>
    <section className="v2-how" id="mashq-v2-how" ref={howRef}><div className="v2-container v2-how-inner"><div className="v2-how-copy"><h2>A school day.<br />Three simple steps.</h2><div className="v2-step-list">{steps.map((s, i) => <button className={`v2-step ${step === i ? 'v2-active-step' : ''}`} key={s.title} onClick={() => setStep(i)} aria-current={step === i ? 'step' : undefined}><span className="v2-step-number">0{i + 1}</span><span><strong>{s.title}</strong><span className="v2-step-text">{s.text}</span></span></button>)}</div><div className="v2-how-progress" aria-label={`Step ${step + 1} of 3`}><i style={{
                 transform: `scaleX(${(step + 1) / 3})`
               }} /></div></div><div className="v2-how-screen"><Phone key={steps[step].src} src={steps[step].src} alt={steps[step].alt} /><p>{steps[step].caption}</p>{step === 2 ? <div className="v3-result-route" aria-label="Student to Teacher to Parent"><span><i />Student</span><b>&gt;</b><span><i />Teacher</span><b>&gt;</b><span><i />Parent</span></div> : <small>{steps[step].note}</small>}</div></div></section>
@@ -199,7 +199,7 @@ export const MashqSchoolLandingV3 = () => {
      <div className="v6-demo"><Demo /></div>
     </div>
    </section>
-   <section className="v2-views" id="mashq-v2-views"><div className="v2-container"><div className="v2-views-heading"><h2>One platform.<br /><span>Three clear views.</span></h2><div className="v2-tabs" role="tablist" aria-label="School community views">{views.map((v, i) => <button role="tab" aria-selected={tab === i} aria-controls="mashq-v2-view-panel" className={tab === i ? 'v2-tab-selected' : ''} key={v.name} onClick={() => setTab(i)}>{v.name}</button>)}</div></div><div className="v2-view-panel" role="tabpanel" id="mashq-v2-view-panel" aria-label={views[tab].name}><div className="v2-tab-image"><Phone src={views[tab].image} alt={views[tab].alt} /><p>{views[tab].caption}</p></div><div className="v2-tab-copy"><h3>{views[tab].title.split('\n').map((line, i) => <React.Fragment key={line}>{i > 0 && <br />}{line}</React.Fragment>)}</h3><ul>{views[tab].benefits.map(b => <li key={b}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6" /></svg>{b}</li>)}</ul></div></div></div></section>
+   <section className="v2-views" id="mashq-v2-views"><div className="v2-container"><div className="v2-views-heading"><h2>One platform.<br /><span>Three clear views.</span></h2><div className="v2-tabs" role="tablist" aria-label="School community views">{views.map((v, i) => <button role="tab" aria-selected={tab === i} aria-controls="mashq-v2-view-panel" className={tab === i ? 'v2-tab-selected' : ''} key={v.name} onClick={() => setTab(i)}>{v.name}</button>)}</div></div><div className="v2-view-panel" role="tabpanel" id="mashq-v2-view-panel" aria-label={views[tab].name}><div className="v2-tab-image"><div className="v2-phone v2-view-phone"><div className="v2-view-phone-scroll" tabIndex={0} role="region" aria-label={`${views[tab].name} screen, scroll to explore`}><SafeImage src={views[tab].image} alt={views[tab].alt} /></div></div><p>{views[tab].caption}</p></div><div className="v2-tab-copy"><h3>{views[tab].title.split('\n').map((line, i) => <React.Fragment key={line}>{i > 0 && <br />}{line}</React.Fragment>)}</h3><ul>{views[tab].benefits.map(b => <li key={b}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6" /></svg>{b}</li>)}</ul></div></div></div></section>
 
 <section className="v3-schools" id="mashq-v3-schools"><div className="v2-container">
  <h2>Run the whole school<br />from one screen.</h2>
